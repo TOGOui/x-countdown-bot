@@ -28,17 +28,18 @@ hours, remainder = divmod(diff.seconds, 3600)
 minutes, seconds = divmod(remainder, 60)
 total_minutes = int(diff.total_seconds() // 60)
 
-# ツイート文面
+# 4. ツイート文面
+# 日、時間、分をきれいに並べた文面です
 message = (
-    f"2027年4月1日まであと...\n"
-    f"【 {total_minutes:,} 分 】\n\n"
-    f"詳細：{days}日と{hours}時間{minutes}分です。\n"
-    f"#Countdown2027 #BOT"
+    f"mura様配信、出禁解除まで\n"
+    f"【 {days}日と{hours}時間{minutes}分 】です。\n\n"
+    f"（総計：{total_minutes:,} 分）\n"
+    f"#mura #シャドバ"
 )
 
-# 投稿実行
+# 5. 投稿実行
 try:
     client.create_tweet(text=message)
-    print(f"Successfully tweeted at {datetime.now()}")
+    print(f"Successfully tweeted: {message}")
 except Exception as e:
     print(f"Error: {e}")
