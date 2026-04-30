@@ -31,7 +31,7 @@ total_minutes = int(diff.total_seconds() // 60)
 # 4. ツイート文面
 # 日、時間、分をきれいに並べた文面です
 message = (
-    f"mura様配信、出禁解除まで\n"
+    f"mura様配信、出禁解除まで残り\n"
     f"【 {days}日と{hours}時間{minutes}分 】です。\n\n"
     f"（総計：{total_minutes:,} 分）\n"
     f"#mura #シャドバ"
